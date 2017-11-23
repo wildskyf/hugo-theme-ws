@@ -143,6 +143,13 @@ main article {
   line-height: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  main article {
+    padding: 1rem 2rem;
+    word-break: break-all;
+  }
+}
+
 main article time {
   float: right;
   padding: 1rem;
