@@ -1,0 +1,238 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url(https://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-k_k_vArhqVIZ0nv9q090hN8.woff2) format("woff2"); }
+@font-face {
+  font-family: "Cutive Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cutive Mono"), local("CutiveMono-Regular"), url("https://fonts.gstatic.com/s/cutivemono/v4/N5odNRruTwjvCM8y77PhQY4P5ICox8Kq3LLUNMylGO4.woff2") format("woff2"); }
+
+::selection {
+  background: #009DC4;
+  color: white;
+}
+
+::-moz-selection {
+  background: #009DC4;
+  color: white;
+}
+
+body {
+  background: #DBDCDD;
+  color: #666666;
+  display: grid;
+  grid-template-columns: [line-start]  5fr [line1] 980px [line2] 5fr [line-end];
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: [line1] 100%[line2];
+  }
+}
+
+.container {
+  box-shadow: 0 0 3px #343434;
+  border-left: 1px solid #aaa;
+  grid-column-start: line1;
+  grid-column-end: line2;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    border-left: 0;
+    box-shadow: 0;
+    margin: 0;
+  }
+}
+
+nav {
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  display: block;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  nav { padding: 0; }
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul a {
+  color: #888;
+  display: block;
+  font-size: 0.6rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+nav ul a:hover {
+  background: #ccc;
+  color: #555;
+  transition-duration: 0.2s;
+}
+
+header {
+  background: #FFF;
+  background: linear-gradient(to bottom, #FFF 0%, #FFF 53%, #FAFAFA 100%);
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  header { padding-bottom: 2rem; }
+}
+header .site-title {
+  border-bottom: 1px solid #ccc;
+  color: #009DC4;
+  display: block;
+  font-size: 2rem;
+  margin: 0 1rem;
+  padding: 5rem 2rem 0.5rem;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-align: left;
+}
+header .slogan {
+  border-bottom: 0;
+  color: #aaa;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 0.75rem;
+  padding: 0.5rem 2rem 0;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 0.75rem;
+  margin: 0 1rem;
+  text-align: left;
+}
+
+main {
+  background: #fff;
+  padding: 0;
+  text-align: left;
+}
+
+main p.page_num, main > time {
+  display: block;
+  padding: 0.75rem 1rem 1.5rem;
+  text-align: justify;
+  background: #F5F5F5;
+  border-bottom: 1px solid #ccc;
+  color: #aaa;
+  font-size: 10px;
+  margin: 0;
+  padding: .5rem 1rem;
+  word-spacing: .25rem;
+}
+
+main article {
+  border-bottom: 1px solid #aaa;
+  padding: 1rem 4rem 2rem;
+  line-height: 1.5rem;
+}
+
+main article time {
+  float: right;
+  padding: 1rem;
+}
+
+main article h1 {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+  color : #009DC4;
+  margin: 1rem 0;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  main article h1 {
+    padding-top: 2rem;
+  }
+}
+main article a {
+  color: #009DC4;
+  text-decoration: none;
+}
+
+.switch {
+  padding: 1rem;
+  text-align: center;
+}
+
+.switch div {
+  display: inline-block;
+}
+.switch div a {
+  color: #009DC4;
+  display: inline-block;
+  margin: 0 .5rem;
+  padding: .5rem;
+}
+@media screen and (max-width: 768px) {
+  .switch div a {
+    padding: 0;
+  }
+}
+
+aside {
+  display: none;
+}
+
+footer {
+  background: #2e4052;
+  color: #FFF;
+  padding: 1rem;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
+  footer a {
+    color: #FFF;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-decoration: none; }
+  footer .footer-item {
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.5;
+    transition-duration: 0.3s; }
+    footer .footer-item:hover {
+      opacity: 0.8; }
+    footer .footer-item::before {
+      content: "-"; }
+    footer .footer-item input[type=submit] {
+      background: transparent;
+      border: none;
+      color: #FFF;
+      cursor: pointer; }
+
+.hide {
+  display: none;
+}
+
+#disqus_thread {
+  border-top: 1px solid #aaa;
+  padding: 2rem 1rem;
+}
+
+#searchbar {
+  margin-left: 24px;
+}
+#searchbar input {
+  width: 70%;
+}
+
+/*# sourceMappingURL=yo.css.map */
+
